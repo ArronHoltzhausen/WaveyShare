@@ -61,7 +61,7 @@ try:
         time_draw.text((120, 20), "poes", font = font24, fill = 0)
         time_draw.text((120, 40), "yes", font = font24, fill = 0)
         time_draw.text((120, 60), "ass", font = font24, fill = 0)
-
+        time_draw.text((120, 80), "owo", font = font24, fill = 0)
 
         epd.displayPartial(epd.getbuffer(time_image))
         num = num + 1
