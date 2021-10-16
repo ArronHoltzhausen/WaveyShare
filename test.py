@@ -51,7 +51,7 @@ try:
     epd.init(epd.PART_UPDATE)
     num = 0
     x = -10
-    y = x+1
+    y = 2
     z = x + 260
     while (True):
         #time_draw.rectangle((175, 0, 250, 50), fill = 255)
@@ -61,7 +61,7 @@ try:
         #time_draw.text((120, 40), "yes", font = font24, fill = 0)
         #time_draw.text((120, 60), "ass", font = font24, fill = 0)
         #time_draw.text((120, 80), "owo", font = font24, fill = 0)
-        time_draw.line([(-10+x,18+y),(250-x,18-y)], fill = 0,width = 2)
+        time_draw.line([((-10+x)*y,18+y),((250-x)*y,18-y)], fill = 0,width = 2)
         x = x + 1
         epd.displayPartial(epd.getbuffer(time_image))
         num = num + 1
