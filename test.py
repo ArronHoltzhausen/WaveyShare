@@ -61,8 +61,8 @@ try:
         #time_draw.text((120, 40), "yes", font = font24, fill = 0)
         #time_draw.text((120, 60), "ass", font = font24, fill = 0)
         #time_draw.text((120, 80), "owo", font = font24, fill = 0)
-        time_draw.line([((-10+x)*y,18+y),((250-x)*y,18-y)], fill = 0,width = 2)
-        x = x + 1
+        time_draw.line([((-10+x)*y,18+y+x),((250-x)*y,18-y+x)], fill = 0,width = 2)
+        x = x + 2
         epd.displayPartial(epd.getbuffer(time_image))
         num = num + 1
         if(num == 100):
