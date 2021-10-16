@@ -47,7 +47,6 @@ try:
     #draw.text((120, 60), 'e-Paper demo', font = font15, fill = 0)
     #draw.text((110, 90), u'微雪电子', font = font24, fill = 0)
 
-
     epd.init(epd.PART_UPDATE)
     num = 0
     x = -10
