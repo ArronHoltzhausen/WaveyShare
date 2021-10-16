@@ -61,11 +61,11 @@ try:
         #time_draw.text((120, 40), "yes", font = font24, fill = 0)
         #time_draw.text((120, 60), "ass", font = font24, fill = 0)
         #time_draw.text((120, 80), "owo", font = font24, fill = 0)
-        time_draw.line([(x,y),(z,x)], fill = 0,width = 2)
+        time_draw.line([(-10+x,18+y),(250-x,18-y)], fill = 0,width = 2)
         x = x + 1
         epd.displayPartial(epd.getbuffer(time_image))
         num = num + 1
-        if(num == 100):
+        if(num == 40):
             break
     # epd.Clear(0xFF)
     logging.info("Clear...")
