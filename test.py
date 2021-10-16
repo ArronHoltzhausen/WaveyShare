@@ -58,7 +58,7 @@ try:
         time_draw.rectangle((175, 0, 250, 50), fill = 255)
         time_draw.text((175, 0), time.strftime('%H:%M:%S'), font = font18, fill = 0)
         time_draw.line([(-10,18),(250,18)], fill = 0,width = 2)
-        time_draw.point((120,20),fill=0)
+        time_draw.point((120,20),fill=1)
         #time_draw.text((120, 20), "poes", font = font24, fill = 0)
         #time_draw.text((120, 40), "yes", font = font24, fill = 0)
         #time_draw.text((120, 60), "ass", font = font24, fill = 0)
