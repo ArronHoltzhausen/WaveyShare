@@ -14,15 +14,11 @@ from PIL import Image,ImageDraw,ImageFont
 import traceback
 
 logging.basicConfig(level=logging.INFO)
-
 try:
     logging.info("epd2in13_V2 Demo")
-
     epd = epd2in13_V2.EPD()
     logging.info("init and Clear")
     #epd.init(epd.FULL_UPDATE)
-    #epd.Clear(0xFF)
-
     font15 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 15)
     font18 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 18)
     font24 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 24)
@@ -33,6 +29,7 @@ try:
     time_draw = ImageDraw.Draw(time_image)
 
     epd.init(epd.FULL_UPDATE)
+    epd.Clear(0xFF)
     epd.displayPartBaseImage(epd.getbuffer(time_image))
 
     #image = Image.new('1', (epd.height, epd.width), 255)  # 255: clear the frame
@@ -58,7 +55,7 @@ try:
         time_draw.rectangle((175, 0, 250, 50), fill = 255)
         time_draw.text((175, 0), time.strftime('%H:%M:%S'), font = font18, fill = 0)
         time_draw.line([(-10,18),(250,18)], fill = 0,width = 2)
-        time_draw.point((120,20),fill=1)
+        time_draw.chord((10, 60, 50, 100), 0, 360, fill = 0)
         #time_draw.text((120, 20), "poes", font = font24, fill = 0)
         #time_draw.text((120, 40), "yes", font = font24, fill = 0)
         #time_draw.text((120, 60), "ass", font = font24, fill = 0)
