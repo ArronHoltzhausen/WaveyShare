@@ -65,7 +65,7 @@ try:
         x = x + 1
         epd.displayPartial(epd.getbuffer(time_image))
         num = num + 1
-        if(num == 40):
+        if(num == 100):
             break
     # epd.Clear(0xFF)
     logging.info("Clear...")
