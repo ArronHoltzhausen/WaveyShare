@@ -1,19 +1,5 @@
 ---
  - hosts: all
-   vars:
-    mysql_database: semaphore
-    mysql_hostname: localhost
-    mysql_username: semaphore
-    mysql_password: semaphore
-    mysql_port: 3306
-    playbook_path: /home/ansible/semaphore
-    web_root:
-    output_dir: /usr/local/bin/
-    admin_username: admin
-    admin_email: admin@admin
-    admin_desc: "admin"
-    admin_password: admin
-    semaphore_binary: https://github.com/ansible-semaphore/semaphore/releases/download/v2.5.1/semaphore_2.5.1_linux_amd64.tar.gz
    tasks:
    - name: Clone a github repository
      git:
