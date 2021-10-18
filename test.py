@@ -40,7 +40,7 @@ try:
     #draw.line([(0,50),(50,0)], fill = 0,width = 1)
     #draw.chord((10, 60, 50, 100), 0, 360, fill = 0)
     #draw.ellipse((55, 60, 95, 100), outline = 0)
-    #draw.pieslice((55, 60, 95, 100), 90, 180, outline = 0)
+    #time_draw.pieslice((55, 60, 95, 100), 90, 180, outline = 0)
     #draw.pieslice((55, 60, 95, 100), 270, 360, fill = 0)
     #draw.polygon([(110,0),(110,50),(150,25)],outline = 0)
     #draw.polygon([(190,0),(190,50),(150,25)],fill = 0)
@@ -57,10 +57,12 @@ try:
         time_draw.text((120, 40), "yes", font = font24, fill = 0)
         time_draw.text((120, 60), "ass", font = font24, fill = 0)
         time_draw.text((120, 80), "owo", font = font24, fill = 0)
+        #time_draw.bitmap() <<<<======
         epd.displayPartial(epd.getbuffer(time_image))
+        num = num + 1
         if(num == 20):
             break
-    # epd.Clear(0xFF)
+    epd.Clear(0xFF)
     logging.info("Clear...")
     epd.init(epd.FULL_UPDATE)
     epd.Clear(0xFF)
