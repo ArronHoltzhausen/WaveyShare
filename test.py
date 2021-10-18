@@ -49,22 +49,16 @@ try:
 
     epd.init(epd.PART_UPDATE)
     num = 0
-    x = -10
-    y = 2
-    z = x + 260
     while (True):
-        #time_draw.rectangle((175, 0, 250, 50), fill = 255)
-        #time_draw.text((175, 0), time.strftime('%H:%M:%S'), font = font18, fill = 0)
-        #time_draw.line([(-10,18),(250,18)], fill = 0,width = 2)
-        #time_draw.text((120, 20), "poes", font = font24, fill = 0)
-        #time_draw.text((120, 40), "yes", font = font24, fill = 0)
-        #time_draw.text((120, 60), "ass", font = font24, fill = 0)
-        #time_draw.text((120, 80), "owo", font = font24, fill = 0)
-        time_draw.line([((-10+x)*y,18+y+x),((250-x)*y,18-y+x)], fill = 0,width = 2)
-        x = x + 2
+        time_draw.rectangle((175, 0, 250, 50), fill = 255)
+        time_draw.text((175, 0), time.strftime('%H:%M:%S'), font = font18, fill = 0)
+        time_draw.line([(-10,18),(250,18)], fill = 0,width = 2)
+        time_draw.text((120, 20), "poes", font = font24, fill = 0)
+        time_draw.text((120, 40), "yes", font = font24, fill = 0)
+        time_draw.text((120, 60), "ass", font = font24, fill = 0)
+        time_draw.text((120, 80), "owo", font = font24, fill = 0)
         epd.displayPartial(epd.getbuffer(time_image))
-        num = num + 1
-        if(num == 100):
+        if(num == 20):
             break
     # epd.Clear(0xFF)
     logging.info("Clear...")
